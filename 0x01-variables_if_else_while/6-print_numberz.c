@@ -12,6 +12,6 @@ int main(void)
 
 	while (ch <= '9')
 		putchar(ch++);
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
