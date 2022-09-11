@@ -25,26 +25,25 @@ int main(void)
 					putchar(d2);
 					putchar(' ');
 					putchar(d3);
-					putchar(d4++);
+					putchar(d4);
 					if (!((d1 == '9') && (d2 == '8')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
+					d4++;
 				}
 				d3++;
 				d4 = '0';
 			}
+			d2++;
 			d3 = d1;
-			d4 = ++d2 + 1;
-			if (d4 > '9')
-			{
-				d3 = d1 + 1;
-				d4 = '0';
-			}
+			d4 = d2 + 1;
 		}
 		d1++;
 		d2 = '0';
+		d3 = d1;
+		d4 = '1';
 	}
 	putchar('\n');
 	return (0);
