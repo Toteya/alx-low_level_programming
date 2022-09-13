@@ -6,3 +6,6 @@ void print_alphabet(void);
 
 /* print_alphabet_x10 - writes the alphabet in lowercase 10 times */
 void print_alphabet_x10(void);
+
+/* _islower - Checks for lowercase characters */
+int _islower(char ch);
