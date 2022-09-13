@@ -9,3 +9,6 @@ void print_alphabet_x10(void);
 
 /* _islower - Checks for lowercase characters */
 int _islower(char ch);
+
+/* _isalpha - Checks if a character is an alphabetic character */
+int _isalpha(char ch);
