@@ -27,3 +27,6 @@ void jack_bauer(void);
 
 /* times_table - Prints the times table from 0 to 9 */
 void times_table(void);
+
+/* add - Adds two integers and returns the result */
+int add(int, int);
