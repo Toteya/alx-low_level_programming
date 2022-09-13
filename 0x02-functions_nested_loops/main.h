@@ -3,3 +3,6 @@ int _putchar(char c);
 
 /* print_alphabet - writes the alphabet in lowercase */
 void print_alphabet(void);
+
+/* print_alphabet_x10 - writes the alphabet in lowercase 10 times */
+void print_alphabet_x10(void);
