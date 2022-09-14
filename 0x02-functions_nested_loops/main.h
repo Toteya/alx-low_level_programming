@@ -33,3 +33,6 @@ int add(int, int);
 
 /* print_to_98 - Prints all integers from n to 98 */
 void print_to_98(int n);
+
+/* print_times_table - Prints the times table for any number n */
+void print_times_table(int n);
