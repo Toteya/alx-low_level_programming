@@ -1,26 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 50 numbers of the Fibonacci sequence
+ * main - Calculates the sum of all even numbered terms of the
+ * Fibonacci sequence under 4,000,000.
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int i;
 	unsigned long int n;
+	unsigned long int sum = 0;
 	unsigned long int tmp1 = 0;
 	unsigned long int tmp2 = 1;
 
-	for (i = 0; i < 50; i++)
+	while (n < 4000000)
 	{
 		n = tmp1 + tmp2;
-		printf("%lu", n);
-		if (i != 49)
-			printf(", ");
+		if (n % 2 == 0)
+			sum += n;
 		tmp1 = tmp2;
 		tmp2 = n;
 	}
-	printf("\n");
+	printf("%lu\n", sum);
 	return (0);
 }
