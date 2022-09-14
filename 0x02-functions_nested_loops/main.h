@@ -30,3 +30,6 @@ void times_table(void);
 
 /* add - Adds two integers and returns the result */
 int add(int, int);
+
+/* print_to_98 - Prints all integers from n to 98 */
+void print_to_98(int n);
