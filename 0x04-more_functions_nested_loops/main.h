@@ -1,0 +1,13 @@
+/**
+ * Header file - main.h
+ * Contains function prototypes for project:
+ * 0x04-more_functions_nested_loops
+ */
+
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+int _isupper(int c);
+
+#endif
