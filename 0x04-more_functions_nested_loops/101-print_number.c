@@ -9,7 +9,8 @@
  */
 void print_number(int n)
 {
-	int i = 5;
+	int x;
+	int i;
 	int j;
 	int ch;
 	int e10, e10_1;
@@ -20,6 +21,7 @@ void print_number(int n)
 		n = -n;
 		_putchar('-');
 	}
+	x = n;
 
 	for (i = 9; i > 0; i--)
 	{
@@ -30,7 +32,7 @@ void print_number(int n)
 		}
 		e10_1 = e10 / 10;
 
-		ch = ((n % e10) - (n % e10) % e10_1) / e10_1;
+		ch = ((x % e10) - (x % e10) % e10_1) / e10_1;
 		if (blank == 1)		/* Allows insigficant zeros not be printed */
 		{
 			if (ch != 0)
