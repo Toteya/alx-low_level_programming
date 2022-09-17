@@ -9,7 +9,6 @@
  */
 void print_number(int n)
 {
-	int x;
 	int i;
 	int j;
 	int ch;
@@ -21,7 +20,17 @@ void print_number(int n)
 		n = -n;
 		_putchar('-');
 	}
-	x = n;
+
+	if (n >= 2000000000)
+	{
+		_putchar('2');
+		blank = 0;
+	}	
+	else if (n >= 1000000000)
+	{
+		_putchar('1');
+		blank = 0;
+	}
 
 	for (i = 9; i > 0; i--)
 	{
@@ -32,7 +41,7 @@ void print_number(int n)
 		}
 		e10_1 = e10 / 10;
 
-		ch = ((x % e10) - (x % e10) % e10_1) / e10_1;
+		ch = ((n % e10) - (n % e10) % e10_1) / e10_1;
 		if (blank == 1)		/* Allows insigficant zeros not be printed */
 		{
 			if (ch != 0)
