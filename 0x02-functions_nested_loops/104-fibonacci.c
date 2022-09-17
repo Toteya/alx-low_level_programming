@@ -1,25 +1,41 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 50 numbers of the Fibonacci sequence
+ * main - Prints the first 98 numbers of the Fibonacci sequence
  *
  * Return: Always 0
  */
 int main(void)
 {
 	int i;
-	unsigned long int n;
-	unsigned long int tmp1 = 0;
-	unsigned long int tmp2 = 1;
+	long max = 1000000000000000000;
+	long a = 1;
+	long prev_a = 1;
+	long tmp_a = 0;
+	int b = 0;
+	int prev_b = 0;
+	int tmp_b = 0;
 
-	for (i = 0; i < 98; i++)
+	printf("%d, ", 1);
+	for (i = 0; i < 97; i++)
 	{
-		n = tmp1 + tmp2;
-		printf("%lu", n);
-		if (i != 97)
+		tmp_a = a;
+		a = a + prev_a;
+		prev_a = tmp_a;
+
+		tmp_b = b;
+		b = b + prev_b;
+		prev_b = tmp_b;
+		if (a > max)
+		{
+			a = a % max;
+			b++;
+		}
+		if (b != 0)
+			printf("%d", b);
+		printf("%ld", a);
+		if (i != 96)
 			printf(", ");
-		tmp1 = tmp2;
-		tmp2 = n;
 	}
 	printf("\n");
 	return (0);
