@@ -39,7 +39,6 @@ int _atoi(char *s)
 		sign = 1;
 	else
 		sign  = -1;
-	printf("num before pow loop: %d\n", num);
 	for (i = n_start; i < n_end; i++)
 	{
 		pow10 = sign;
@@ -49,9 +48,7 @@ int _atoi(char *s)
 		}
 		num += (*(s + i) - '0') * pow10;
 		pow10 = 1;
-		printf("num is now: %d, pow10 is %d\n", num, pow10);
 	}
-	printf("num is: %d\n", num);
 	return (num);
 }
 
