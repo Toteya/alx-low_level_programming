@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _atoi - Converts a string to an integer
  * @s: Pointer to the string that is to be converted
@@ -13,7 +11,8 @@ int _atoi(char *s)
 	int n_flag = 0;
 	int n_start = 0, n_end = 0, n_len = 0;
 	int num = 0;
-	int pow10 = 1;
+	int pow10;
+	int sign = -1;
 	int count_neg = 0;
 
 	while (*(s + i) != '\0')
@@ -32,20 +31,27 @@ int _atoi(char *s)
 		if (*(s + i) == '-')
 			count_neg++;
 		i++;
-		n_end = i;
+		if(n_flag == 1)
+			n_end = i;
 	}
 	n_len = n_end - n_start;
+	if (count_neg % 2 == 0)
+		sign = 1;
+	else
+		sign  = -1;
+	printf("num before pow loop: %d\n", num);
 	for (i = n_start; i < n_end; i++)
 	{
+		pow10 = sign;
 		for (j = 1; j < (n_len - (i - n_start)); j++)
 		{
 			pow10 *= 10;
 		}
 		num += (*(s + i) - '0') * pow10;
 		pow10 = 1;
+		printf("num is now: %d, pow10 is %d\n", num, pow10);
 	}
-	if (count_neg % 2 != 0)
-		num *= -1;
+	printf("num is: %d\n", num);
 	return (num);
 }
 
