@@ -1,8 +1,8 @@
 /**
  * _strcat - Concatenates two strings
- * @dest  - Pointer pointing to the string to which another is
+ * @dest: Pointer pointing to the string to which another is
  * to be concatenated
- * @src -Pointer pointing to the string which is to be concatenated to dest
+ * @src: Pointer pointing to the string which is to be concatenated to dest
  *
  * Return: char pointer to the concatenated string
  */
