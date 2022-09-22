@@ -23,7 +23,7 @@ int main(void)
 
 		c = 0;
 		for (j = 2; j <= i / 2; j++)	/* Loop checks whether i is a prime number */
-		{				/* No need to do iterations for numbers above i/2 */
+		{				/* No need to do iterations for j above i/2 */
 			if (i % j == 0)
 				c++;
 			if (c > 0)		/* If c > 0, obviously i is not a prime number */

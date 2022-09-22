@@ -12,7 +12,7 @@ void print_number(int n)
 	int i;
 	int j;
 	int ch;
-	int e10, e10_1;
+	int e10, e10_1;		/* used for exponentiation 10^i and 10^i-1 */
 	int blank = 1;
 
 	if (n < 0)		/* print negative numbers */
