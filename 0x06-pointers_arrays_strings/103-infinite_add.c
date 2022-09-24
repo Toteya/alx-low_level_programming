@@ -8,9 +8,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, k;
-	int x, len;
-	int carry = 0;
+	int i = 0, j = 0, k, x, len, carry = 0;
 
 	while (*(n1 + i) != '\0')
 		i++;
@@ -18,18 +16,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	if (size_r <= i || size_r <= j)
 		return (0);
-	if (i > j)
-		len = i;
-	else
+	len = i;
+	if (j > i)
 		len = j;
 	for (i = i - 1, j = j - 1, k = len - 1; ; i--, j--, k--)
 	{
-		if (k < 0 && !carry)
+		if ((k < 0 && !carry) || (k < 0 && carry && size_r > len + 1))
 			break;
 		else if (k < 0 && carry && (size_r <= (len + 1)))
 			return (0);
-		else if (k < 0 && carry && size_r > len + 1)
-			break;
 		else if (i < 0 && j >= 0)
 			x = *(n2 + j) - 48 + carry;
 		else if (i >= 0 && j < 0)
@@ -37,10 +32,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			x = *(n1 + i) + *(n2 + j) - 96 + carry;
 		*(r + k) = (x % 10) + '0';
+		carry = 0;
 		if (x >= 10)
 			carry = 1;
-		else
-			carry = 0;
 	}
 	if (carry)
 	{
@@ -49,9 +43,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 				*(r + k) = '1';
 			else
 				*(r + k) = *(r + k - 1);
-		len++;
 	}
-	for (k = len; k < size_r; k++)
+	for (k = len + carry; k < size_r; k++)
 		*(r + k) = '\0';
 	return (r);
 }
