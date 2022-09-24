@@ -22,9 +22,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (i = i - 1, j = j - 1, k = len - 1; ; i--, j--, k--)
 	{
 		if ((k < 0 && !carry) || (k < 0 && carry && size_r > len + 1))
-			break;
+			break; /* if k < 0, the string is complete, break infinite loop */
 		else if (k < 0 && carry && (size_r <= (len + 1)))
-			return (0);
+			return (0); /* string is complete but buffer cannot accomodate the carry */
 		else if (i < 0 && j >= 0)
 			x = *(n2 + j) - 48 + carry;
 		else if (i >= 0 && j < 0)
@@ -36,7 +36,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (x >= 10)
 			carry = 1;
 	}
-	if (carry)
+	if (carry) /* shift the buffer by one place if there's still a carry */
 	{
 		for (k = len; k >= 0; k--)
 			if (k == 0)
