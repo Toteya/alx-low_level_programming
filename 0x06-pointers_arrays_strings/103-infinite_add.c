@@ -1,12 +1,9 @@
-#include <stdio.h>
-
 /**
  * infinite_add - Adds two numbers of any size contained in two strings
  * @n1: Pointer to a string containing a number
  * @n2: Pointer to a second string containing a number
  * @r: Pointer to the buffer string to store the result
  * @size_r: Size of the buffer
- *
  * Return: Pointer to the string containing the sum
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -37,8 +34,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			shift = 1;
 			break;
 		}
-		else if (i < 0 && j < 0 && carry)
-			x = carry;
 		else if (i < 0 && j >= 0)
 			x = *(n2 + j) - 48 + carry;
 		else if (i >= 0 && j < 0)
@@ -54,12 +49,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (shift)
 	{
 		for (k = len; k >= 0; k--)
-		{
 			if (k == 0)
 				*(r + k) = '1';
 			else
 				*(r + k) = *(r + k - 1);
-		}
 		len++;
 	}
 	for (k = len; k < size_r; k++)
