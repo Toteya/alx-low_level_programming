@@ -12,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 	int found = 0;
 	char *f = 0;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (i = 0; haystack[i] != '\0' && needle[j] != '\0'; i++)
 	{
 		if (haystack[i] == needle[j])
 		{
@@ -27,9 +27,7 @@ char *_strstr(char *haystack, char *needle)
 			found = 0;
 		}
 		if (needle[j] == '\0' && found)
-		{
 			break;
-		}
 	}
 	if (!found)
 		*f = 0;
