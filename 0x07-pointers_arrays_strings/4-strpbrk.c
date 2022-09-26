@@ -6,7 +6,7 @@
  * @s: Pointer to the string in which to search
  * @accept: Pointer to the string of bytes to search for
  *
- * Return: Pointer to the address of the first occurence of a 
+ * Return: Pointer to the address of the first occurence of a
  * matching byte in s.
  */
 char *_strpbrk(char *s, char *accept)
