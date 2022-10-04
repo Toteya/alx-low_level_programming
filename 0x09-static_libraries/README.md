@@ -9,3 +9,4 @@ liball.a from all the .c files that are in the current directory.
 ## Resources:
 * [Creating A Static “C” Library Using “ar” and “ranlib”]https://alx-intranet.hbtn.io/rltoken/XB1iH0qE6gshx0x8TfRAPQ
 * [What is difference between Dynamic and Static library(Static and Dynamic linking]https://alx-intranet.hbtn.io/rltoken/PexOGO-npR_ZDQk-SpOR9g
+* [C Static Libraries — What, Why, and How?]https://medium.com/@bdov_/https-medium-com-bdov-c-static-libraries-what-why-and-how-b6b442b054d3
