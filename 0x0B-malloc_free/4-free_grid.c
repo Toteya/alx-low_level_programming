@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * free_grid - Frees up malloced memory
+ * free_grid - Frees up malloc'ed memory
  * @grid: Address to two-dimensional array (grid) memory to be freed
  * @height: Height of two-dimensional array
  *
