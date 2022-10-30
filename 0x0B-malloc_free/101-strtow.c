@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int word;
 	char **ptr;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -24,6 +24,8 @@ char **strtow(char *str)
 		else if (str[i] == ' ')
 			word = 0;
 	}
+	if (size == 1)
+		return (NULL);
 	ptr = malloc(sizeof(char *) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
