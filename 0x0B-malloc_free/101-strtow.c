@@ -36,7 +36,7 @@ char **strtow(char *str)
 			ptr[x] = malloc(sizeof(char) * (count + 1));
 			if (ptr[x] == NULL)
 				return (NULL);
-			for (y = 0; y < count; y++)
+			for (y = 0; y < count - 1; y++)
 				ptr[x][y] = str[i - count + 1 + y];
 			ptr[x][y] = '\0';
 			x++;
@@ -48,7 +48,7 @@ char **strtow(char *str)
 		ptr[x] = malloc(sizeof(char) * (count + 1));
 		if (ptr[x] == NULL)
 			return (NULL);
-		for (y = 0; y < count; y++)
+		for (y = 0; y < count - 1; y++)
 			ptr[x][y] = str[i - count + 1 + y];
 		ptr[x][y] = '\0';
 		x++;
