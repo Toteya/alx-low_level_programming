@@ -24,7 +24,7 @@ char **strtow(char *str)
 		else if (str[i] == ' ')
 			word = 0;
 	}
-	ptr = malloc(sizeof(char) * (size + 1));
+	ptr = malloc(sizeof(char *) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
