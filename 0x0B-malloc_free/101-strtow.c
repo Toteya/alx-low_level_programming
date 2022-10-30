@@ -8,7 +8,7 @@
  */
 char **strtow(char *str)
 {
-	unsigned int i, size = 0, count = 1, x = 0, y;
+	unsigned int i, size = 1, count = 1, x = 0, y;
 	int word;
 	char **ptr;
 
