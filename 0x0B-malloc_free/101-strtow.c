@@ -35,7 +35,7 @@ char **strtow(char *str)
 			count++;
 		if (str[i] == ' ' && count > 1)
 		{
-			ptr[x] = malloc(sizeof(char) * (count + 1));
+			ptr[x] = malloc(sizeof(char) * (count));
 			if (ptr[x] == NULL)
 				return (NULL);
 			for (y = 0; y < count - 1; y++)
@@ -47,7 +47,7 @@ char **strtow(char *str)
 	}
 	if (count > 1)
 	{
-		ptr[x] = malloc(sizeof(char) * (count + 1));
+		ptr[x] = malloc(sizeof(char) * (count));
 		if (ptr[x] == NULL)
 			return (NULL);
 		for (y = 0; y < count - 1; y++)
