@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 
 /**
  * new_dog - Creates a new dog instance
@@ -9,11 +10,14 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t dog;
-	dog_t *d = &dog;
-
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
-	return (d);
+	dog_t *dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+	{
+		return (NULL);
+	}
+	
+	dog->name = name;
+	dog->age = age;
+	dog->owner = owner;
+	return (dog);
 }
