@@ -9,22 +9,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	char *opr = "+-*/%";
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	for (i = 0; i < 5; i++)
+	func = get_op_func(argv[2]);
+	if (func == NULL)
 	{
-		if (opr[i] == *argv[2])
-		{
-			printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
-			return (EXIT_SUCCESS);
-		}
+		printf("Error\n");
+		return (99);
 	}
-	printf("Error\n");
-	return (99);
+	else
+		printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
+	return (EXIT_SUCCESS);
 }
+

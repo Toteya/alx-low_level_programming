@@ -3,7 +3,7 @@
 /**
  * get_op_func - Selects the correct function based on the passed operator
  * @s: pointer to the operator character
- * 
+ *
  * Return: Pointer to a function to perform the operation.
  */
 int (*get_op_func(char *s))(int, int)
@@ -26,5 +26,5 @@ int (*get_op_func(char *s))(int, int)
 		}
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
