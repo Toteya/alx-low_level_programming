@@ -4,7 +4,7 @@
  * print_strings - Prints strings
  * @separator: String to separate arguments when printed
  * @n: Number of arguments
- * 
+ *
  * Return: Nothing.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
