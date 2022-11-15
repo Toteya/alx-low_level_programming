@@ -11,9 +11,10 @@
 
 * -4. Write a function that frees a list_t list.
 
-* -5. 
+* -5. Write a function that prints You're beat! and yet, you must allow,
+\nI bore my house upon my back!\n before the main function is executed. 
 
-* -6.
+* -6. Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line.
 
 ## Resources:
 * [Data Structures]https://alx-intranet.hbtn.io/concepts/120
