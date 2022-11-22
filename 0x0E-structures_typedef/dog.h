@@ -1,6 +1,8 @@
 #ifndef DOG_H
 #define DOG_H
 
+#include <string.h>
+
 /**
  * struct dog - Data type definition for a dog
  * @name: Pointer to  string name of the dog
